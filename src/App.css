@@ -23,3 +23,14 @@
     transform: scale(1);
   }
 }
+
+@keyframes meals-appear {
+  from {
+    opacity: 10;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
