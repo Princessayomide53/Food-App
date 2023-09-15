@@ -32,13 +32,14 @@ const AvailableMeals = () => {
   const mealsList = DUMMY_MEALS.map((meals) => (
     <MealsList
       key={meals.id}
+      id={meals.id}
       name={meals.name}
       description={meals.description}
       price={meals.price}
     />
   ));
   return (
-    <section className="max-w-[50rem] w-[90%] my-[2rem] mx-auto">
+    <section className="bump max-w-[50rem] w-[90%]  my-[2rem] mx-auto">
       <Card className=" bg-white shadow-2xl p-[1rem] rounded-xl">
         <ul>{mealsList}</ul>
         {/* <MealsList item={DUMMY_MEALS} /> */}

@@ -1,5 +1,5 @@
 .clip {
-  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+  transform: rotateZ(-5deg) translateY(-4rem) translateX(-0rem);
 }
 
 .bump {
@@ -28,6 +28,28 @@
   from {
     opacity: 10;
     transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal {
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
   }
   to {
     opacity: 1;
