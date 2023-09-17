@@ -1,16 +1,31 @@
 import React, { useContext } from "react";
 import Modal from "../UI/Modal";
 import CartContext from "../../Store/cart-context";
+import CartItems from "./CartItems";
 
 const Cart = (props) => {
   const cartsCtx = useContext(CartContext);
   const totalAmount = `$${cartsCtx.totalAmount.toFixed(2)}`;
 
   const hasItems = cartsCtx.meals.length > 0;
+  const cartItemRemoveHandler = (id) => {
+    cartsCtx.removeItem(id);
+  };
+
+  const cartItemAddHandler = (meals) => {
+    cartsCtx.addItem(meals);
+  };
   const cartItems = (
-    <ul>
+    <ul className="max-h-[20rem] overflow-hidden overflow-y-scroll">
       {cartsCtx.meals.map((item) => (
-        <li key={item.id}>{item.name} </li>
+        <CartItems
+          key={item.id}
+          name={item.name}
+          price={item.price}
+          amount={item.amount}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
+        />
       ))}
     </ul>
   );
