@@ -6,7 +6,7 @@ import HeaderCartButton from "./HeaderCartButton";
 const Header = (props) => {
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-[5rem] text-white flex bg-[#8a2b06] justify-between px-[10%] items-center shadow-lg z-10">
+      <header className="fixed top-0 left-0 w-full h-[5rem] text-white flex bg-[#8a2b06] justify-between md:px-[10%] px-[5%] items-center shadow-lg z-10">
         <h1 className="font bold text-2xl">ReactMeals</h1>
         <HeaderCartButton onClick={props.onClick} />
       </header>

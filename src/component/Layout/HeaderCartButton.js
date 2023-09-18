@@ -27,11 +27,11 @@ const HeaderCartButton = (props) => {
       <button
         className={`${
           cartHighLight ? "bump" : ""
-        } ${"cursor-pointer font-inherit border-none bg-[#4d1601] text-white px-[3rem] py-[0.76rem] flex justify-around rounded-3xl font-bold items-center hover:active:bg-[#2c0d00]"}`}
+        } ${"cursor-pointer font-inherit border-none bg-[#4d1601] text-white px-[1rem] py-[0.30rem] md:py-[0.76rem] flex justify-around rounded-3xl font-bold items-center hover:active:bg-[#2c0d00]"}`}
         onClick={props.onClick}
       >
-        <GiShoppingCart className="w-[1.35rem] h-[1.35rem] mr-[0.5rem]" />
-        <span>Your Cart</span>
+        <GiShoppingCart className="text-2xl md:text-base md:w-[1.35rem] h-[1.35rem] mr-[0.5rem]" />
+        <span className="text-sm md:text-base">Your Cart</span>
         <span className="font-bold ml-[1rem] rounded-3xl px-[0.75rem] py-[0.25rem] md:px-[1rem] bg-[#b94517] hover:active:bg-[#92320c]">
           {/* {isNaN(numberOfCart) ? "N/A" : String(numberOfCart)} */}
           {numberOfCart}
